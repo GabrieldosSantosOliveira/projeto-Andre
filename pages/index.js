@@ -3,7 +3,6 @@ import Footer from '../components/footer.js'
 import Cabecalho from '../components/Cabecalho.js'
 import api from './api/api'
 import Card from '../components/Card'
-import styles from '../styles/Home.module.css'
 import { useEffect,useState } from 'react'
 
 
@@ -20,14 +19,14 @@ export default function Home() {
 			})
 	}, [])
   return (
-    <div>
+    <div className="grid grid-cols-6 grid-rows-6">
       <Cabecalho/>
 
     {
 				autores.map(autor => {
   
 					return (
-						<div >
+						<div key={autor.id}>
 							<Card id={autor.id} nome={autor.nome} sobrenome={autor.sobrenome} data={autor.data_nascimento}/>
               
 						</div>

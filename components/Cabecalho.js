@@ -4,7 +4,8 @@ import { Book, User} from 'phosphor-react'
 
 function Cabecalho() {
 	return (
-		<div className='menu-horizontal-container'>
+		<div className='flex justify-around
+		 items-center col-span-6'>
 			<Link href="/posts/livros">
 				<a><Book size={24} color="#fe0606" />
 				<span>Livros</span></a>
