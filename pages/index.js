@@ -10,7 +10,8 @@ export default function Home() {
   
 	const [autores, setAutores] = useState([])
   useEffect(() => {
-		api.get('/')
+		api
+    .get('/')
 			.then(response => {
 				setAutores(response.data)
 			})
